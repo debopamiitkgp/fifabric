@@ -46,8 +46,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
   },
 };
 
