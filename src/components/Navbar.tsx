@@ -7,7 +7,7 @@ export function Navbar() {
   const { theme, toggle } = useTheme();
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md border-b" style={{ backgroundColor: "rgba(var(--bg-rgb, 10,15,28), 0.85)", borderColor: "var(--border)" }}>
+    <nav className="sticky top-0 z-50 backdrop-blur-md border-b" style={{ backgroundColor: theme === "dark" ? "rgba(10,15,28,0.85)" : "rgba(250,250,248,0.85)", borderColor: "var(--border)" }}>
       <div className="max-w-outer mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-0 text-xl font-headline font-bold tracking-tight" style={{ color: "var(--text)" }}>
           <span style={{ color: "var(--accent)" }}>Fi</span>
