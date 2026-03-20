@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [data-theme="dark"] {
+    --bg: #0A0F1C;
+    --bg-card: #111827;
+    --text: #E8E6E3;
+    --text-muted: #9A9590;
+    --accent: #C9A84C;
+    --border: #1e293b;
+  }
+
+  [data-theme="light"] {
+    --bg: #FAFAF8;
+    --bg-card: #FFFFFF;
+    --text: #1A1A1A;
+    --text-muted: #4A4A4A;
+    --accent: #B8943E;
+    --border: #E5E5E5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(201, 168, 76, 0.3);
+    color: inherit;
+  }
+}
+
+@layer components {
+  .prose-fifabric h2 {
+    @apply font-headline text-2xl font-semibold mt-12 mb-4;
+    color: var(--text);
+  }
+
+  .prose-fifabric h3 {
+    @apply font-headline text-xl font-semibold mt-8 mb-3;
+    color: var(--text);
+  }
+
+  .prose-fifabric p {
+    @apply text-body mb-6;
+    color: var(--text);
+    line-height: 1.8;
+  }
+
+  .prose-fifabric ul,
+  .prose-fifabric ol {
+    @apply mb-6 pl-6;
+    color: var(--text);
+  }
+
+  .prose-fifabric li {
+    @apply mb-2 text-body;
+    line-height: 1.8;
+  }
+
+  .prose-fifabric ul li {
+    list-style-type: disc;
+  }
+
+  .prose-fifabric ol li {
+    list-style-type: decimal;
+  }
+
+  .prose-fifabric a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.15s;
+  }
+
+  .prose-fifabric a:hover {
+    opacity: 0.8;
+  }
+
+  .prose-fifabric blockquote {
+    @apply border-l-2 pl-6 my-6 italic;
+    border-color: var(--accent);
+    color: var(--text-muted);
+  }
+
+  .prose-fifabric code {
+    @apply font-mono text-sm px-1.5 py-0.5 rounded;
+    background-color: var(--bg-card);
+  }
+
+  .prose-fifabric strong {
+    @apply font-semibold;
+    color: var(--text);
+  }
+
+  .data-callout {
+    @apply text-center p-6;
+  }
+
+  .data-callout .value {
+    @apply font-mono text-3xl font-bold block mb-1;
+    color: var(--accent);
+  }
+
+  .data-callout .label {
+    @apply text-meta uppercase tracking-wider;
+    color: var(--text-muted);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
