@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { getArticleBySlug, getArticleSlugs, getAllArticles } from "@/lib/articles";
 import { GeoBadge } from "@/components/GeoBadge";
 import { RecommendationBox } from "@/components/RecommendationBox";
@@ -92,7 +93,7 @@ export default function ArticlePage({
 
       {/* Content */}
       <div className="max-w-content mx-auto px-6 prose-fifabric">
-        <MDXRemote source={content} components={mdxComponents} />
+        <MDXRemote source={content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
       </div>
 
       {/* PhiFabric footnote */}
