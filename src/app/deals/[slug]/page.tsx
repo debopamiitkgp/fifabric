@@ -61,14 +61,16 @@ export default function ArticlePage({
     <article className="py-12">
       {/* Header */}
       <header className="max-w-content mx-auto px-6 mb-12">
+        {(meta.geo || meta.category) && (
         <div className="flex items-center gap-3 mb-6">
-          <GeoBadge geo={meta.geo} />
+          {meta.geo && <GeoBadge geo={meta.geo} />}
           {meta.category && (
             <span className="text-meta" style={{ color: "var(--text-muted)" }}>
               {meta.category}
             </span>
           )}
         </div>
+        )}
 
         <h1 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-balance" style={{ color: "var(--text)" }}>
           {meta.title}
