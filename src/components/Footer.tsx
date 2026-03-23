@@ -22,7 +22,6 @@ export function Footer() {
         </div>
         <div className="mt-8 pt-6 border-t flex flex-col md:flex-row justify-between items-start md:items-center gap-4" style={{ borderColor: "var(--border)" }}>
           <p className="text-meta" style={{ color: "var(--text-muted)" }}>
-            Part of the Fabric family &middot;{" "}
             <a href="https://phifabric.com" className="hover:opacity-80 transition-opacity" style={{ color: "var(--accent)" }}>
               PhiFabric
             </a>
