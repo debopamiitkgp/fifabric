@@ -101,6 +101,53 @@
     color: var(--text);
   }
 
+  /* ── Table styles ── */
+  .prose-fifabric table {
+    @apply w-full my-8 text-sm;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+  }
+
+  @media (min-width: 640px) {
+    .prose-fifabric table {
+      display: table;
+    }
+  }
+
+  .prose-fifabric thead {
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .prose-fifabric th {
+    @apply px-4 py-3 text-left font-semibold;
+    color: var(--text);
+    background-color: var(--bg-card);
+    white-space: nowrap;
+  }
+
+  .prose-fifabric td {
+    @apply px-4 py-3 text-left;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    line-height: 1.6;
+    vertical-align: top;
+  }
+
+  .prose-fifabric tbody tr:hover {
+    background-color: var(--bg-card);
+  }
+
+  .prose-fifabric tbody tr:last-child td {
+    border-bottom: 2px solid var(--accent);
+  }
+
+  /* Section-header rows (bold text spanning columns) */
+  .prose-fifabric td strong:only-child,
+  .prose-fifabric td b:only-child {
+    color: var(--accent);
+  }
+
   .data-callout {
     @apply text-center p-6;
   }
